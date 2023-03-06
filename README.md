@@ -1,2 +1,2 @@
-# ml
-Curso Introductorio a Machine Learning
+# Machine Learning
+Maestría en Ingeniería de Software
