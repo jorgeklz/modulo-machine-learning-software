@@ -1,0 +1,56 @@
+La ecuación del error cuadrático medio (MSE, por sus siglas en inglés) es:
+
+MSE = (1/n) * Σ(yi - ŷi)^2
+
+donde n es el número de observaciones, yi es el valor real de la variable dependiente, ŷi es el valor predicho por el modelo para la i-ésima observación.
+
+El coeficiente de determinación (R^2) es una medida de qué tan bien el modelo se ajusta a los datos. Su ecuación es:
+
+R^2 = 1 - (SSR/SST)
+
+donde SSR es la suma de los cuadrados de las desviaciones explicadas (la suma de los cuadrados de las diferencias entre los valores predichos y la media de la variable dependiente) y SST es la suma de los cuadrados totales (la suma de los cuadrados de las diferencias entre los valores reales y la media de la variable dependiente).
+
+
+# Ejemplo de cálculo
+
+Un ejemplo sencillo de cálculo de MSE sería si tenemos los siguientes valores reales y predichos para una variable dependiente:
+
+y_real = [2, 3, 5, 4, 6]
+y_predicho = [3, 2, 4, 5, 5]
+
+Entonces, podemos calcular el MSE de la siguiente manera:
+
+MSE = (1/5) * [(2-3)^2 + (3-2)^2 + (5-4)^2 + (4-5)^2 + (6-5)^2]
+= (1/5) * [1 + 1 + 1 + 1 + 1]
+= 0.2
+
+Un ejemplo sencillo de cálculo de R^2 sería si tenemos los mismos valores reales y predichos que en el ejemplo anterior. Primero, calculamos la media de los valores reales:
+
+mean_y = (2+3+5+4+6)/5
+= 4
+
+Luego, calculamos SSR y SST:
+
+SSR = (3-4)^2 + (2-4)^2 + (4-4)^2 + (5-4)^2 + (5-4)^2
+= 5
+
+SST = (2-4)^2 + (3-4)^2 + (5-4)^2 + (4-4)^2 + (6-4)^2
+= 10
+
+Finalmente, calculamos R^2:
+
+R^2 = 1 - (5/10)
+= 0.5
+
+
+
+# Interpretación
+
+R^2 varía entre 0 y 1, donde un valor cercano a 1 indica que el modelo ajusta bien los datos y es capaz de predecir la variable dependiente con alta precisión, mientras que un valor cercano a 0 indica que el modelo no ajusta bien los datos y tiene baja capacidad predictiva.
+
+Ejemplo:
+MSE: 0.0122
+R^2: 0.94
+El MSE indica que el modelo tiene un error promedio de 0.0122 en la predicción. El R^2 de 0.94 indica que este modelo explica un 94% de la variabilidad de la variable dependiente y tiene una altísima capacidad predictiva.
+
+
