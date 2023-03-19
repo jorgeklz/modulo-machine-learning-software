@@ -6,7 +6,7 @@ donde n es el número de observaciones, yi es el valor real de la variable depen
 
 El coeficiente de determinación (R^2) es una medida de qué tan bien el modelo se ajusta a los datos. Su ecuación es:
 
-R^2 = 1 - (SSR/SST)
+R^2 = SSR/SST
 
 donde SSR es la suma de los cuadrados de las desviaciones explicadas (la suma de los cuadrados de las diferencias entre los valores predichos y la media de la variable dependiente) y SST es la suma de los cuadrados totales (la suma de los cuadrados de las diferencias entre los valores reales y la media de la variable dependiente).
 
@@ -41,8 +41,8 @@ SST = 10
 
 Finalmente, calculamos R^2:
 
-R^2 = 1 - (7/10)
-= 0.3
+R^2 = 7/10
+= 0.7
 
 
 Este coeficiente de determinación R^2 se encuentra en el rango de 0 a 1, y mide qué tan bien el modelo lineal se ajusta a los datos observados. Un valor de R^2 cercano a 1 indica que el modelo se ajusta muy bien a los datos, mientras que un valor cercano a 0 indica que el modelo no se ajusta bien a los datos. Valores negativos de R2 son posibles, esta situación se daría en el caso que el modelo fuera menos ajustado que el promedio. De todas formas, para efectos interpretativos en algunas áreas sería recomendable interpretarlo como cero.
