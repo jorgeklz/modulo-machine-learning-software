@@ -1,6 +1,6 @@
 La ecuación del error cuadrático medio (MSE, por sus siglas en inglés) es:
 
-MSE = (1/n) * Σ(yi - ŷi)^2
+MSE = (1/n) * Σ (yi - ŷi)^2
 
 donde n es el número de observaciones, yi es el valor real de la variable dependiente, ŷi es el valor predicho por el modelo para la i-ésima observación.
 
@@ -22,35 +22,27 @@ Entonces, podemos calcular el MSE de la siguiente manera:
 
 MSE = (1/5) * [(2-3)^2 + (3-2)^2 + (5-4)^2 + (4-5)^2 + (6-5)^2]
 = (1/5) * [1 + 1 + 1 + 1 + 1]
-= 0.2
+= 1
 
 Un ejemplo sencillo de cálculo de R^2 sería si tenemos los mismos valores reales y predichos que en el ejemplo anterior. Primero, calculamos la media de los valores reales:
 
 mean_y = (2+3+5+4+6)/5
 = 4
 
-Luego, calculamos SSR y SST:
-
+Luego, calculamos la Suma Residual de Cuadrados o SSR  y la Suma Total de Cuadrados o SST
+# SSR o predichos menos promedio de reales
 SSR = (3-4)^2 + (2-4)^2 + (4-4)^2 + (5-4)^2 + (5-4)^2
-= 5
-
+SSR = 1 + 4 + 0 + 1 + 1
+SSR = 7
+# SST o reales respecto a promedio de reales:
 SST = (2-4)^2 + (3-4)^2 + (5-4)^2 + (4-4)^2 + (6-4)^2
-= 10
+SST = 4 + 1 + 1+ 0 + 4
+SST = 10
 
 Finalmente, calculamos R^2:
 
-R^2 = 1 - (5/10)
-= 0.5
+R^2 = 1 - (7/10)
+= 0.3
 
 
-
-# Interpretación
-
-R^2 varía entre 0 y 1, donde un valor cercano a 1 indica que el modelo ajusta bien los datos y es capaz de predecir la variable dependiente con alta precisión, mientras que un valor cercano a 0 indica que el modelo no ajusta bien los datos y tiene baja capacidad predictiva.
-
-Ejemplo:
-MSE: 0.0122
-R^2: 0.94
-El MSE indica que el modelo tiene un error promedio de 0.0122 en la predicción. El R^2 de 0.94 indica que este modelo explica un 94% de la variabilidad de la variable dependiente y tiene una altísima capacidad predictiva.
-
-
+Este coeficiente de determinación R^2 se encuentra en el rango de 0 a 1, y mide qué tan bien el modelo lineal se ajusta a los datos observados. Un valor de R^2 cercano a 1 indica que el modelo se ajusta muy bien a los datos, mientras que un valor cercano a 0 indica que el modelo no se ajusta bien a los datos. Valores negativos de R2 son posibles, esta situación se daría en el caso que el modelo fuera menos ajustado que el promedio. De todas formas, para efectos interpretativos en algunas áreas sería recomendable interpretarlo como cero.
