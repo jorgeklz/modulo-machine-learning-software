@@ -620,7 +620,7 @@ selected_features_rfe <- names(ds_entrenamiento[, -19])[names(ds_entrenamiento[,
 
 formula_rfe <- as.formula(paste("Compra ~", paste(selected_features_rfe, collapse = "+")))
 modelo_rfe_final <- train(formula_rfe, data = ds_entrenamiento, 
-                          #method = "glm", 
+                          method = "glm", 
                           family = "binomial")
 
 # Evaluar el modelo con el conjunto de prueba
